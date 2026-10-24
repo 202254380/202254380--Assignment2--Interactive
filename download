@@ -1,0 +1,11 @@
+node_modules/
+bin/
+obj/
+*.class
+.vs/
+.vscode/
+.DS_Store
+# AI evidence must NOT be committed
+conversations/
+artifacts/
+*-ai-evidence.zip

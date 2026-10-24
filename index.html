@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Mhammed Aboalsaud, a Software Engineering student.">
+    <title>Mhammed Aboalsaud | Portfolio</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="bg-orb orb-1" aria-hidden="true"></div><div class="bg-orb orb-2" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="logo" href="#about">MA<span>.</span></a>
+
+        <nav aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#advice">Advice</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="theme-toggle" type="button" aria-label="Switch to dark mode">◐</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="about">
+        <div class="container hero-grid reveal">
+          <div>
+            <p class="label" id="greeting">Welcome to my portfolio</p>
+            <h1>I’m learning to build <span>useful web experiences.</span></h1>
+            <p class="intro">
+              I’m a Software Engineering student focused on building creative, practical projects with modern technologies. I’m particularly interested in game development and modding, and I enjoy working with C# and Java while expanding my knowledge of databases and SQL. Currently, I’m developing my HTML, CSS, and JavaScript skills to create responsive web experiences. Outside programming, I enjoy working out, which helps me stay disciplined and focused.
+            </p>
+
+            <form id="name-form" class="name-form" novalidate>
+              <label for="visitor-name">Your name (I’ll remember it on this device)</label>
+              <div class="inline-field">
+                <input id="visitor-name" name="visitor-name" type="text" maxlength="30" autocomplete="given-name" placeholder="e.g., Sara" aria-describedby="name-error" required>
+                <button class="button" type="submit">Save name</button>
+                <button class="button ghost" id="forget-name" type="button" hidden>Forget me</button>
+              </div>
+              <p class="field-error" id="name-error" role="alert"></p>
+            </form>
+
+            <div class="hero-actions"><a class="button" href="#projects">See my projects</a><a class="button ghost" href="#contact">Contact me</a></div>
+          </div>
+
+          <aside class="focus-card">
+            <img class="profile-image" src="assets/images/profile.jpg" alt="Portrait of Mhammed Aboalsaud">
+            <p>Currently learning</p>
+            <h2>HTML, CSS &amp; JavaScript</h2>
+            <ul>
+              <li>Semantic structure</li>
+              <li>Responsive layouts</li>
+              <li>Basic interactivity</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="container">
+          <p class="label">What I know</p>
+          <h2 class="section-title">Skills</h2>
+
+          <ul class="skill-list reveal">
+            <li><strong>HTML</strong><span>Semantic page structure</span></li>
+            <li><strong>CSS</strong><span>Responsive layouts and styling</span></li>
+            <li><strong>JavaScript</strong><span>Website interactions, forms, and APIs</span></li>
+            <li><strong>C# &amp; Java</strong><span>Application and game development</span></li>
+            <li><strong>SQL</strong><span>Database fundamentals</span></li>
+            <li><strong>Problem Solving</strong><span>Breaking problems into steps</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <p class="label">My work</p>
+          <h2 class="section-title">Projects</h2>
+
+          <div class="project-tools">
+            <div class="search-box">
+              <label for="project-search">Search projects</label>
+              <input id="project-search" type="search" placeholder="Try “workout”, “tasks”, or “Java”" autocomplete="off">
+            </div>
+            <div class="filters" role="group" aria-label="Filter projects by technology">
+              <button type="button" class="filter active" data-filter="all" aria-pressed="true">All</button>
+              <button type="button" class="filter" data-filter="csharp" aria-pressed="false">C#</button>
+              <button type="button" class="filter" data-filter="java" aria-pressed="false">Java</button>
+              <button type="button" class="filter" data-filter="javascript" aria-pressed="false">JavaScript</button>
+            </div>
+          </div>
+
+          <p class="result-count" id="project-count" aria-live="polite"></p>
+
+          <div class="project-grid reveal" id="project-grid">
+            <a class="project-card" data-tags="csharp javascript" data-open="dlg-ironlog" role="button" tabindex="0" aria-label="Open the IronLog gym tracker" aria-haspopup="dialog" aria-controls="dlg-ironlog">
+              <div class="project-image gym">
+                <img src="assets/images/gym-project.svg" alt="Preview of the IronLog gym tracker">
+              </div>
+              <div class="project-text">
+                <h3>IronLog Gym Tracker</h3>
+                <p>A workout logger that records exercises, calculates training volume, saves progress, and provides coaching tips.</p>
+                <small>C# · ASP.NET Core · JavaScript</small>
+                <span class="project-action">Try it live →</span>
+              </div>
+            </a>
+
+            <a class="project-card" data-tags="java javascript" data-open="dlg-focuslist" role="button" tabindex="0" aria-label="Open the FocusList Java to-do project" aria-haspopup="dialog" aria-controls="dlg-focuslist">
+              <div class="project-image todo">
+                <img src="assets/images/todo-project.svg" alt="Preview of the FocusList to-do application">
+              </div>
+              <div class="project-text">
+                <h3>FocusList To-Do App</h3>
+                <p>A calm task manager with categories, filters, completion progress, persistent storage, and a lightweight Java server.</p>
+                <small>Java · HttpServer · JavaScript</small>
+                <span class="project-action">Try it live →</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="empty-state" id="project-empty" hidden>
+            <h3>No projects found</h3>
+            <p>Nothing matches your search. Clear the search box or choose “All” to see every project.</p>
+            <button type="button" class="button" id="reset-filters">Show all projects</button>
+          </div>
+        </div>
+      </section>
+
+      
+
+      
+
+      <section class="section advice" id="advice">
+        <div class="container">
+          <p class="label">From the web</p>
+          <h2 class="section-title">Advice of the moment</h2>
+          <div class="advice-card reveal" aria-live="polite" aria-busy="false">
+            <p id="advice-text">Press the button to load a piece of advice.</p>
+            <div class="advice-actions">
+              <button class="button" id="advice-button" type="button">Get new advice</button>
+              <button class="button ghost" id="advice-retry" type="button" hidden>Try again</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="label">Get in touch</p>
+            <h2 class="section-title">Contact me</h2>
+            <p>I’m open to learning opportunities and conversations about software development.</p>
+            <a class="email" href="https://github.com/202254380" target="_blank" rel="noopener noreferrer">github.com/202254380</a>
+          </div>
+
+          <form id="contact-form" class="reveal" novalidate>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-msg" required>
+            <p class="field-error" id="name-msg"></p>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-msg" required>
+            <p class="field-error" id="email-msg"></p>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" aria-describedby="message-msg" required></textarea>
+            <p class="field-error" id="message-msg"></p>
+
+            <button class="button" type="submit">Send message</button>
+            <p class="form-status" id="form-status" role="status"></p>
+            <small>Demo form — no information is sent.</small>
+          </form>
+        </div>
+      </section>
+    </main>
+
+
+    <dialog class="app-dialog" id="dlg-ironlog" aria-labelledby="t-iron">
+      <div class="dialog-head"><div><p class="label">C# · ASP.NET Core · JavaScript</p><h2 id="t-iron">IronLog Gym Tracker</h2></div><button class="dialog-close" type="button" data-close aria-label="Close">×</button></div>
+      <div class="dialog-body">
+
+          <div class="stats" aria-label="Workout summary">
+            <div><strong id="workout-count">0</strong><span>Exercises</span></div>
+            <div><strong id="set-count">0</strong><span>Total sets</span></div>
+            <div><strong id="volume-count">0</strong><span>Volume (kg)</span></div>
+          </div>
+
+          <div class="workspace">
+            <form id="workout-form" novalidate>
+              <h3>Log a workout</h3>
+              <label for="exercise">Exercise</label>
+              <input id="exercise" name="exercise" type="text" placeholder="e.g., Bench Press" required maxlength="40" aria-describedby="workout-error">
+
+              <div class="field-row">
+                <div><label for="sets">Sets</label><input id="sets" name="sets" type="number" min="1" max="20" step="1" value="3" required aria-describedby="workout-error"></div>
+                <div><label for="reps">Reps</label><input id="reps" name="reps" type="number" min="1" max="100" step="1" value="8" required aria-describedby="workout-error"></div>
+                <div><label for="weight">Weight (kg)</label><input id="weight" name="weight" type="number" min="0" max="1000" step="0.5" value="20" required aria-describedby="workout-error"></div>
+              </div>
+
+              <button class="button" type="submit">Add exercise</button>
+              <p class="field-error" id="workout-error" role="alert"></p>
+
+              <div class="quick-picks" aria-label="Quick exercise choices">
+                <span>Quick pick:</span>
+                <button type="button" class="chip" data-exercise="Bench Press">Bench</button>
+                <button type="button" class="chip" data-exercise="Squat">Squat</button>
+                <button type="button" class="chip" data-exercise="Deadlift">Deadlift</button>
+              </div>
+            </form>
+
+            <div class="panel">
+              <div class="panel-head">
+                <h3 id="log-title">Workout log</h3>
+                <button class="button ghost small" id="clear-workouts" type="button">Clear all</button>
+              </div>
+              <div id="workout-list" class="item-list"></div>
+              <p id="workout-empty" class="muted-center">No exercises logged yet. Add your first one.</p>
+            </div>
+          </div>
+
+          <div class="coach-card">
+            <div>
+              <p class="label">Coach’s corner</p>
+              <p id="coach-tip">Consistency beats one perfect workout.</p>
+            </div>
+            <button class="button" id="new-tip" type="button">New tip</button>
+          </div>
+        </div>
+    </dialog>
+
+    <dialog class="app-dialog" id="dlg-focuslist" aria-labelledby="t-focus">
+      <div class="dialog-head"><div><p class="label" id="today"></p><h2 id="t-focus">FocusList To-Do</h2></div><button class="dialog-close" type="button" data-close aria-label="Close">×</button></div>
+      <div class="dialog-body">
+
+          <div class="panel progress-card">
+            <div class="panel-head">
+              <div>
+                <span class="muted">Daily progress</span>
+                <strong id="progress-label">0% complete</strong>
+              </div>
+              <span class="badge" id="server-status">Browser demo</span>
+            </div>
+            <div class="progress-track"><span id="progress-bar"></span></div>
+            <p id="progress-message">Add a task to begin your day.</p>
+          </div>
+
+          <div class="panel">
+            <form id="task-form" class="add-task" novalidate>
+              <label class="sr-only" for="task-input">New task</label>
+              <input id="task-input" name="task" type="text" placeholder="What needs to be done?" required maxlength="80" aria-describedby="task-error">
+              <label class="sr-only" for="category">Category</label>
+              <select id="category" name="category">
+                <option>Personal</option><option>Study</option><option>Work</option><option>Health</option>
+              </select>
+              <button class="button" type="submit">Add task</button>
+            </form>
+            <p class="field-error" id="task-error" role="alert"></p>
+
+            <div class="panel-head">
+              <h3 id="tasks-title">Today’s focus</h3>
+              <div class="filters" role="group" aria-label="Filter tasks">
+                <button class="filter active" type="button" data-task-filter="all" aria-pressed="true">All</button>
+                <button class="filter" type="button" data-task-filter="open" aria-pressed="false">Open</button>
+                <button class="filter" type="button" data-task-filter="done" aria-pressed="false">Done</button>
+              </div>
+            </div>
+
+            <div id="task-list" class="item-list"></div>
+            <p id="task-empty" class="muted-center">Your list is clear. Add a task above when you’re ready.</p>
+            <button class="button ghost small" id="clear-completed" type="button">Clear completed tasks</button>
+          </div>
+        </div>
+    </dialog>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Mhammed Aboalsaud</p>
+      </div>
+    </footer>
+  </body>
+</html>
